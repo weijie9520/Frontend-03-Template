@@ -62,7 +62,7 @@ const getState = (partialMatchTable) => {
       // j 为零表示当前状态未匹配
       return j > 0
         ? /** j不等于零，表示当前已有匹配成功的字符，需做回退操作 */
-          handle(matchNum - partialMatchTable[matchNum].num)(s)
+          handle(partialMatchTable[matchNum].num)(s)
         : handle(0);
     };
   };
@@ -98,11 +98,14 @@ const matchIndex = (str, pattern) => {
 };
 
 /** 判断 字符串 BBC ABCDAB ABCDABCDABDE 是否存在 ABCDABD*/
-console.log(match("BBC ABCDAB ABCDABCDABDE", "ABCDABD"));
-console.log("BBC ABCDAB ABCDABCDABDE".match("ABCDABD"));
-console.log(match("dsfewrwe234dsf23dsf234", "f23dsf2"));
-console.log("dsfewrwe234dsf23dsf234".match("f23dsf2"));
-console.log(matchIndex("BBC ABCDAB ABCDABCDABDE", "ABCDABD"));
-console.log("BBC ABCDAB ABCDABCDABDE".indexOf("ABCDABD"));
-console.log(matchIndex("dsfewrwe234dsf23dsf234", "f23dsf2"));
-console.log("dsfewrwe234dsf23dsf234".indexOf("f23dsf2"));
+// console.log(match("BBC ABCDAB ABCDABCDABDE", "ABCDABD"));
+// console.log("BBC ABCDAB ABCDABCDABDE".match("ABCDABD"));
+// console.log(match("dsfewrwe234dsf23dsf234", "f23dsf2"));
+// console.log("dsfewrwe234dsf23dsf234".match("f23dsf2"));
+// console.log(matchIndex("BBC ABCDAB ABCDABCDABDE", "ABCDABD"));
+// console.log("BBC ABCDAB ABCDABCDABDE".indexOf("ABCDABD"));
+// console.log(matchIndex("dsfewrwe234dsf23dsf234", "f23dsf2"));
+// console.log("dsfewrwe234dsf23dsf234".indexOf("f23dsf2"));
+
+console.log(match("ababababx", "ababx"));
+console.log(matchIndex("ababababx", "ababx"));

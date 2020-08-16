@@ -1,4 +1,7 @@
 const http = require("http");
+const fs = require("fs");
+
+const htmlTemplate = fs.readFileSync("./HTML_Template.html");
 
 http
   .createServer((request, response) => {
@@ -14,7 +17,8 @@ http
         body = Buffer.concat(body).toString();
         console.log(body);
         response.writeHead(200, { "Content-Type": "text/html" });
-        response.end(" abcde\n");
+        response.end(htmlTemplate);
+        // response.end(" abcde\n");
       });
   })
   .listen(8088);
