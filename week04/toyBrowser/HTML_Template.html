@@ -2,22 +2,30 @@
   <head>
     <title>monkey</title>
     <style>
+      html {
+        background-color: black;
+      }
       .wrap {
-        margin: 0 auto;
-        width: 609px;
+        width: 500px;
+        height: 500px;
+        display: flex;
+        background-color: rgb(255, 0, 255);
       }
-      p {
-        text-align: center;
+      .test1 {
+        flex: 1;
+        height: 200px;
+        background-color: rgb(0, 255, 255);
       }
-      .test {
-        text-align: left;
+      .test2 {
+        width: 100px;
+        background-color: rgb(255, 255, 0);
       }
     </style>
   </head>
   <body>
     <div class="wrap">
-      <p id="title">baby monkey</p>
-      <p class="test">asdfsdf zsdfsd Zfdsf </p>
+      <div class="test1"></div>
+      <div class="test2"></div>
     </div>
   </body>
 </html>
