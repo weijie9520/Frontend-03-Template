@@ -107,5 +107,5 @@ const matchIndex = (str, pattern) => {
 // console.log(matchIndex("dsfewrwe234dsf23dsf234", "f23dsf2"));
 // console.log("dsfewrwe234dsf23dsf234".indexOf("f23dsf2"));
 
-console.log(match("ababababx", "ababx"));
-console.log(matchIndex("ababababx", "ababx"));
+// console.log(match("ababababx", "ababx"));
+// console.log(matchIndex("ababababx", "ababx"));

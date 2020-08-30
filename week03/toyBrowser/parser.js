@@ -1,5 +1,5 @@
 const css = require("css");
-
+const layout = require("./layout");
 const EOF = Symbol("EOF");
 let currentToken = null;
 let currentTextNode = null;
@@ -176,7 +176,7 @@ function emit(token) {
       if (top.tagName === "style") {
         addCssRules(top.children[0].content);
       }
-
+      layout(top);
       stack.pop();
     }
     currentTextNode = null;
