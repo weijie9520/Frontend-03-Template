@@ -161,7 +161,7 @@
         });
         const cache = {};
         const insert = async (x, y, i) => {
-          await sleep();
+          // await sleep();
           const { size } = config;
           if (x >= size || y >= size || x < 0 || y < 0) return;
           const position = [x, y];
